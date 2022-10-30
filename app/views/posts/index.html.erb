@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Posts</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Kind</th>
+    <th>Author</th>
+  </tr>
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.description %></td>
+      <td><%= post.kind %></td>
+      <td><%= post.author %></td>
+      <td><%= link_to 'Show', post %></td>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    </tr>
+  <% end %>
+  </table>
+
+
+<%= link_to "New post", new_post_path %>
