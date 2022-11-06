@@ -1,0 +1,9 @@
+<h1><%= @categorie.title %></h1>
+<p><%= @categorie.description %></p>
+<p><%= @categorie.types %></p>
+<ul>
+  <li><%= link_to "Edit", edit_category_path(@categorie) %></li>
+  
+  <li><%= button_to "Destroy",@categorie, method: 'delete', data: { confirm: 'Are you sure?' } %></li>
+  <li><%= link_to "Back ", categories_path %></li>
+</ul>
