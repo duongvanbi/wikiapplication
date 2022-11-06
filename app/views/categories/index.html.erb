@@ -1,0 +1,12 @@
+<h1>Category</h1>
+
+<ul>
+  <% @categories.each do |categorie| %>
+    <li>
+    
+    <%= link_to categorie.title, categorie %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "New category", new_category_path %>
+<li><%= link_to "Back to home", root_path %></li>
