@@ -1,6 +1,6 @@
 <%= form_with(model: post) do |form| %>
   <% if post.errors.any? %>
-    <div style="color: red">
+    <div style="color: red" class="text-center">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
       <ul>
@@ -11,27 +11,31 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="text-center">
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
   </div>
 
-  <div>
+  <div class="text-center">
     <%= form.label :description, style: "display: block" %>
     <%= form.text_area :description %>
   </div>
 
-  <div>
+  <div class="text-center">
     <%= form.label :kind, style: "display: block" %>
     <%= form.text_area :kind %>
   </div>
 
-  <div>
+  <div class="text-center">
     <%= form.label :author, style: "display: block" %>
     <%= form.text_area :author %>
   </div>
+  <div class="text-center">
+    <%= form.label :category, style: "display: block" %>
+    <%= form.select :category_id, Category.all.map {|c| [c.title, c.id]}  %>
+  </div>
 
-  <div>
+  <div class="text-center" style="margin-top:20px;">
     <%= form.submit %>
   </div>
 <% end %>

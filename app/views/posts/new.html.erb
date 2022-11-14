@@ -1,9 +1,11 @@
-<h1>New post</h1>
-
+<div class="alert alert-info text-center" role="alert">
+<h1>Add new Post</h1>
+</div>
 <%= render "form", post: @post %>
 
-<br>
+<div class="text-center" style="margin-top:10px;">
+<button type="button" class="btn btn-outline-primary" ><%= link_to "Back to posts", posts_path %></button>
 
-<div>
-  <%= link_to "Back to posts", posts_path %>
 </div>
+
+
