@@ -1,3 +1,48 @@
-<h1>Chào mọi người đến với wiki app</h1>
-<p>Của Dương Văn Bi</p>
-<%= link_to "Vào POST nào", controller: "posts" %>
+
+
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">WIKI APPLICATION</a>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<h1 class="text-center link-info"><b>Chào mọi người đến với wiki app</b></h1>
+
+<p class="text-center link-primary">Của Dương Văn Bi</p>
+<div class="text-center">
+<div class="spinner-grow text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-success" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-danger" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-warning" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-info" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-light" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-dark" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+</div>
+<div class="text-center" >
+  <img style="height:200px"src="https://herothemes.com/wp-content/uploads/1095319_Featured-image-graphic-for-HeroThemes_Op1_062221-880x495.png" class="rounded" alt="...">
+</div>
+
+<div class="text-center" style="margin-top:50px;">
+<button type="button" class="btn btn-outline-primary" ><%= link_to "Vào POST nào", controller: "posts" %></button>
+<button type="button" class="btn btn-outline-success"><%= link_to "Category", controller: "categories" %></button>
+</div>

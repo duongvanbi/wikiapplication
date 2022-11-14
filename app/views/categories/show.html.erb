@@ -1,0 +1,21 @@
+<div class="alert alert-info text-center" role="alert">
+<h1>Show</h1>
+</div>
+<div class="card text-center" style="width: 18rem; margin:0 auto">
+  <img src="https://kinsta.com/wp-content/uploads/2022/08/wordpress-wiki.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Title</h5>
+    <p class="card-text"><%= @category.title %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Description: <%= @category.description %></li>
+    <li class="list-group-item">Category type: <%= @category.category_type %></li>
+   
+  </ul>
+  <div class="card-body">
+  <%= link_to "Edit", edit_category_path(@category) %>
+  <%= link_to "Back ", categories_path %>
+  <%= button_to "Destroy",@category, method: 'delete', data: { confirm: 'Are you sure?' } %>
+  </div>
+</div>
+
